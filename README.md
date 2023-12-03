@@ -1,4 +1,6 @@
 # Project 2: Shell Builtins
+[![Coverage Status](https://coveralls.io/repos/github/Aryan-Patel5475/GoShell/badge.svg?branch=master)](https://coveralls.io/github/Aryan-Patel5475/GoShell?branch=master)
+
 
 ## Description
 
