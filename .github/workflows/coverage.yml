@@ -1,0 +1,40 @@
+name: Go Coverage
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: '1.16'  # Replace with your Go version
+
+    - name: Test with coverage (main)
+      run: go test -coverprofile=coverage_main.out ./...
+
+    - name: Test with coverage (builtins)
+      run: go test -coverprofile=coverage_builtins.out ./builtins
+
+    - name: Install gocovmerge (if not already installed)
+      run: go get -u github.com/wadey/gocovmerge
+
+    - name: Merge coverage profiles
+      run: gocovmerge coverage_main.out coverage_builtins.out > coverage_merged.out
+
+    - name: Generate HTML coverage report
+      run: go tool cover -html=coverage_merged.out -o coverage.html
+
+    - name: Display function-level coverage
+      run: go tool cover -func=coverage_merged.out
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        file: ./coverage_merged.out
+        fail_ci_if_error: true
