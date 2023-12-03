@@ -1,8 +1,5 @@
 # Project 2: Shell Builtins
 ![Coverage](https://img.shields.io/badge/Coverage-83.7%25-brightgreen)
-![Coverage Badge](./coverage_badge.svg)
-
-[![Go Coverage](https://github.com/Aryan-Patel5475/GoShell/actions/workflows/coverage.yml/badge.svg)](https://github.com/Aryan-Patel5475/GoShell/actions/workflows/coverage.yml)
 
 
 ## Description
