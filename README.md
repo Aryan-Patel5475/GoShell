@@ -1,5 +1,5 @@
 # Project 2: Shell Builtins
-[![Coverage Status](https://coveralls.io/repos/github/Aryan-Patel5475/GoShell/badge.svg?branch=master)](https://coveralls.io/github/Aryan-Patel5475/GoShell?branch=master)
+[![Go Coverage](https://github.com/Aryan-Patel5475/GoShell/actions/workflows/coverage.yml/badge.svg)](https://github.com/Aryan-Patel5475/GoShell/actions/workflows/coverage.yml)
 
 
 ## Description
