@@ -8,10 +8,8 @@ import (
 	"testing"
 )
 
-// MockFailWorkingDirectoryGetter is a mock that simulates failure in getting the working directory.
 type MockFailWorkingDirectoryGetter struct{}
 
-// Getwd simulates a failure in getting the working directory.
 func (MockFailWorkingDirectoryGetter) Getwd() (string, error) {
 	return "", fmt.Errorf("mock error")
 }

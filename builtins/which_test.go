@@ -10,11 +10,9 @@ import (
 )
 
 func TestFindCommand(t *testing.T) {
-	// Setup a mock PATH environment
 	tempDir := t.TempDir()
 	os.Setenv("PATH", tempDir)
 
-	// Create a mock command in the temp directory
 	mockCommand := filepath.Join(tempDir, "mockCommand")
 	if err := os.WriteFile(mockCommand, []byte("#!/bin/sh\n"), 0755); err != nil {
 		t.Fatal(err)

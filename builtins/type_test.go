@@ -1,4 +1,3 @@
-// type_test.go
 package builtins_test
 
 import (
