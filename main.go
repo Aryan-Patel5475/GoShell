@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"io"
 	"os"
-	"os/exec"
 	"os/user"
 	"strings"
 
@@ -81,11 +80,25 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 	case "exit":
 		exit <- struct{}{}
 		return nil
+	case "echo":
+		return builtins.Echo(w, args...)
+	case "pwd":
+		return builtins.PrintWorkingDirectory(w, builtins.OsWorkingDirectoryGetter{})
+	case "repeat":
+		return builtins.RepeatCommand(w, args...)
+	case "which":
+		return builtins.FindCommand(w, args[0])
+	case "type":
+		return builtins.TypeCommand(w, args[0])
+	default:
+		println("Not a built-in command")
 	}
 
-	return executeCommand(name, args...)
+	//return executeCommand(name, args...)
+	return nil
 }
 
+/*
 func executeCommand(name string, arg ...string) error {
 	// Otherwise prep the command
 	cmd := exec.Command(name, arg...)
@@ -97,3 +110,4 @@ func executeCommand(name string, arg ...string) error {
 	// Execute the command and return the error.
 	return cmd.Run()
 }
+*/

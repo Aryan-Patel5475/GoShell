@@ -2,12 +2,13 @@ package main
 
 import (
 	"bytes"
-	"github.com/stretchr/testify/require"
 	"io"
 	"strings"
 	"testing"
 	"testing/iotest"
 	"time"
+
+	"github.com/stretchr/testify/require"
 )
 
 func Test_runLoop(t *testing.T) {
