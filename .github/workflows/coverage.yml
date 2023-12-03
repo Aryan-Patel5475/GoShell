@@ -36,8 +36,10 @@ jobs:
     - name: Display function-level coverage
       run: go tool cover -func=coverage_merged.out
 
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v2
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v3
+      env:
+        CODECOV_TOKEN: 53bef8ac-003a-464a-bd03-3480cb839e70
       with:
         file: ./coverage_merged.out
         fail_ci_if_error: true
