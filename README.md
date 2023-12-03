@@ -1,4 +1,6 @@
 # Project 2: Shell Builtins
+![Coverage Badge](./coverage_badge.svg)
+
 [![Go Coverage](https://github.com/Aryan-Patel5475/GoShell/actions/workflows/coverage.yml/badge.svg)](https://github.com/Aryan-Patel5475/GoShell/actions/workflows/coverage.yml)
 
 
