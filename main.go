@@ -91,11 +91,10 @@ func handleInput(w io.Writer, input string, exit chan<- struct{}) error {
 	case "type":
 		return builtins.TypeCommand(w, args[0])
 	default:
-		println("Not a built-in command")
+		return fmt.Errorf("not a built-in command")
 	}
 
 	//return executeCommand(name, args...)
-	return nil
 }
 
 /*
