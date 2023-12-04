@@ -1,6 +1,6 @@
 # Project 2: Shell Builtins
 [![golangci-lint](https://github.com/Aryan-Patel5475/GoShell/actions/workflows/golangci-lint.yml/badge.svg)](https://github.com/Aryan-Patel5475/GoShell/actions/workflows/golangci-lint.yml)
-![Coverage](https://img.shields.io/badge/Coverage-83.7%25-brightgreen)
+![Coverage](https://img.shields.io/badge/Coverage-91.3%25-brightgreen)
 
 
 ## Description
